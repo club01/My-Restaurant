@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>My Website</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <!--  <link href="assets/img/favicon.png" rel="icon">-->
+    <!--  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: Lumia - v2.1.0
+    * Template URL: https://bootstrapmade.com/lumia-bootstrap-business-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+        <div class="logo mr-auto">
+            <!--        <h1><a href="index.html">Logo</a></h1>-->
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <a href="index.html"><h2>My Restaurant</h2></a>
+        </div>
+
+        <nav class="nav-menu d-lg-block">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="videos.html">Our Videos</a></li>
+                <li><a href="mini-game.html">Mini Game</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li class="active"><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="thank-you.html">Thank You</a></li>
+
+            </ul>
+        </nav><!-- .nav-menu -->
+    </div>
+</header><!-- End Header -->
+<section id="hero1" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container text-center text-md-left" data-aos="fade-up">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2>Restaurant Info</h2>
+                <label style="font-weight: bold" class="mt-2">Name: </label><span> Amante</span><br>
+                <label style="font-weight: bold" class="mt-2">Phone no: </label><span> +198563545</span><br>
+                <label style="font-weight: bold" class="mt-2">Address: </label><span> USA California</span>
+            </div>
+            <div class="col-lg-6">
+                <form role="form" onsubmit="return checkContactValidations()" action="save.php" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name"/>
+                        <p id="nameError" style="color: red;display: none">Name is required.</p>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" name="email"
+                               placeholder="Enter Email"/>
+                        <p id="emailError" style="color: red;display: none">Email is required.</p>
+                    </div>
+                    <div class="form-group">
+                                <textarea class="form-control" rows="5" name="message" id="message"
+                                          placeholder="Message"></textarea>
+                        <p id="messageError" style="color: red;display: none">Message is required.</p>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-custom" style="background: black; color: white">Send Now
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section><!-- End Hero -->
+<script>
+    function checkContactValidations() {
+        document.getElementById('nameError').style.display = 'none';
+        document.getElementById('phoneNoError').style.display = 'none';
+        document.getElementById('emailError').style.display = 'none';
+        document.getElementById('messageError').style.display = 'none';
+        if (document.getElementById('name').value === '') {
+            document.getElementById('nameError').style.display = 'block';
+            return false;
+        }
+        if (document.getElementById('email').value === '') {
+            document.getElementById('emailError').style.display = 'block';
+            return false;
+        }
+        if (document.getElementById('message').value === '') {
+            document.getElementById('messageError').style.display = 'block';
+            return false;
+        }
+    }
+</script>
+<footer class="page-footer bg-dark text-white" style="margin-top: -45px">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3"><b>© 2021 Copyright</b>:
+        <b> This website is only use for educational purpose</b>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+</body>
+
+</html>
